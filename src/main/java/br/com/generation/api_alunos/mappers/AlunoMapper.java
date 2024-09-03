@@ -1,8 +1,11 @@
 package br.com.generation.api_alunos.mappers;
 
+import org.springframework.stereotype.Service;
+
 import br.com.generation.api_alunos.dtos.CreateAlunoDto;
 import br.com.generation.api_alunos.entitites.Aluno;
 
+@Service
 public class AlunoMapper {
 
     public Aluno toModel(CreateAlunoDto dto) {
