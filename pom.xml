@@ -13,6 +13,7 @@
 	<artifactId>api-alunos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>api-alunos</name>
+	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 	<url />
 	<licenses>
@@ -73,6 +74,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>app</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
