@@ -1,17 +1,23 @@
 package br.com.generation.api_alunos.mappers;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-
 import br.com.generation.api_alunos.dtos.CreateAlunoDto;
 import br.com.generation.api_alunos.entitites.Aluno;
 
-@Mapper(componentModel = "spring")
-public interface AlunoMapper {
-    
-    @Mapping(target = "avaliacoes", ignore = true)
-    @Mapping(target = "id", ignore = true)
-    Aluno map(CreateAlunoDto createAlunoDto);
-    
-    CreateAlunoDto map(Aluno aluno);
+public class AlunoMapper {
+
+    public Aluno toModel(CreateAlunoDto dto) {
+        return Aluno.builder()
+            .nome(dto.getNome())
+            .idade(dto.getIdade())
+            .dataNascimento(dto.getDataNascimento())
+            .build();
+    }
+
+    public CreateAlunoDto toDto(Aluno aluno) {
+        return CreateAlunoDto.builder()
+            .nome(aluno.getNome())
+            .idade(aluno.getIdade())
+            .dataNascimento(aluno.getDataNascimento())
+            .build();
+    }
 }

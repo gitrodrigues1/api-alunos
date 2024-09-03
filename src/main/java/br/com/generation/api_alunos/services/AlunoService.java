@@ -35,7 +35,7 @@ public class AlunoService {
         }
         aluno = new Aluno(dto.getNome(), dto.getIdade(), dto.getDataNascimento());
         
-        CreateAlunoDto response = mapper.map(alunoRepository.save(aluno));
+        CreateAlunoDto response = mapper.toDto(alunoRepository.save(aluno));
         return response;
     }
 
@@ -48,7 +48,7 @@ public class AlunoService {
 
         aluno.setTurma(turma);
 
-        CreateAlunoDto response = mapper.map(alunoRepository.save(aluno));
+        CreateAlunoDto response = mapper.toDto(alunoRepository.save(aluno));
         return response;
 
     }
