@@ -2,8 +2,6 @@ package br.com.generation.api_alunos.dtos;
 
 import java.time.LocalDate;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import br.com.generation.api_alunos.entitites.Turma;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

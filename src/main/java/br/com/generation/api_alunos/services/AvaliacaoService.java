@@ -42,8 +42,8 @@ public class AvaliacaoService {
         avaliacao.setAluno(alunoRepository.findById(dto.getAluno()).get());
         avaliacao.setMateria(materiaRepository.findById(dto.getMateria()).get());
         avaliacao.setAvaliacao(AvaliacaoType.AV1);
-        avaliacao.setAnoLetivo(dto.getAnoLetivo());
-        avaliacao.setNota(dto.getNota());
+        if(dto != null) avaliacao.setAnoLetivo(dto.getAnoLetivo());
+        if(dto != null) avaliacao.setNota(dto.getNota());
         avaliacaoRepository.save(avaliacao);
 
         return avaliacao;
