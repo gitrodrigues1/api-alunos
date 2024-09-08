@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/avaliacao")
-@Tag(name = "Avaliacao Controller", description = "API para inclusões de avaliação dos alunos.")
+@Tag(name = "Avaliacao Controller", description = "API para cadastro de avaliação dos alunos.")
 public class AvaliacaoController {
     
     private AvaliacaoService avaliacaoService;

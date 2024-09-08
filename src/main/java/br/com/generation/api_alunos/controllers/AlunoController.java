@@ -24,7 +24,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/alunos")
-@Tag(name = "Aluno Controller", description = "API para inclusões de alunos.")
+@Tag(name = "Aluno Controller", description = "API para cadastro de alunos.")
 public class AlunoController {
     
     private AlunoService alunoService;
@@ -40,7 +40,7 @@ public class AlunoController {
     }
 
     @PostMapping("/{alunoId}/{turmaId}")
-    @Operation(summary = "Adicionar turma", description = "Adiciona uma nova turma")
+    @Operation(summary = "Adicionar turma", description = "Adiciona uma nova turma a um aluno")
     public CreateAlunoDto addTurma(@PathVariable Long alunoId, @PathVariable Long turmaId) throws AlunoNotFoundException, TurmaNotFoundException {
         return alunoService.addTurma(alunoId, turmaId);
     }
